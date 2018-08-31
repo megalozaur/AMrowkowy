@@ -1,10 +1,6 @@
 #include "graf.h"
 using namespace std;
 
-/**
- * @brief Tgraf::alokuj
- * @param W
- */
 void Tgraf::alokuj(int W){
     this->W=W;
     g1D=new double[W*W];
@@ -14,7 +10,6 @@ void Tgraf::alokuj(int W){
     cout << "Stworzono graf o "<<W<<" wierzchołkach"<<endl;
     zeroj_f();
     }
-
 
 Tgraf::Tgraf(int W){
     W++;

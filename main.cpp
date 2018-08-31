@@ -1,5 +1,3 @@
-// d(i,j)=0 niejednoznaczne
-
 #include "zycie.h"
 #include <string>
 #include <iostream>
