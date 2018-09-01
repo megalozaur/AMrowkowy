@@ -39,8 +39,10 @@ Pierwsze dwie to numery wierzchołków, w numeracji od zera; muszą być mniejsz
 ## Zapisywanie trasy do pliku
 Wynik działania programu zapisywany jest jako plik tekstowy, którego pierwsza linia zawiera długość trasy, a kolejne numery węzłów ją definiujących.
 Obsługa programu
-Program umożliwia ustawienie parametrów symulacji, opisanych w pierwszej części instrukcji, wczytanie lub wygenerowanie grafu, określenie początkowego i końcowego węzła.Obsługa programu przebiega z poziomu linii poleceń. Po wywołaniu z argumentem *--help*,
-program wyświetla następujące informacje:
+Program umożliwia ustawienie parametrów symulacji, opisanych w pierwszej części instrukcji, wczytanie lub wygenerowanie grafu, określenie początkowego i końcowego węzła.
+
+## Obsługa programu
+Obsługa programu przebiega z poziomu linii poleceń. Po wywołaniu z argumentem *--help*, program wyświetla następujące informacje:
 ```
 AMrowkowy -- Adam Brodacki
 
