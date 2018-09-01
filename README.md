@@ -42,7 +42,7 @@ Obsługa programu
 Program umożliwia ustawienie parametrów symulacji, opisanych w pierwszej części instrukcji, wczytanie lub wygenerowanie grafu, określenie początkowego i końcowego węzła.
 
 ## Obsługa programu
-Obsługa programu przebiega z poziomu linii poleceń. Po wywołaniu z argumentem *--help*, program wyświetla następujące informacje:
+Obsługa programu przebiega z poziomu linii poleceń. Po wywołaniu z argumentem ``--help``, program wyświetla następujące informacje:
 ```
 AMrowkowy -- Adam Brodacki
 
