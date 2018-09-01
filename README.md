@@ -6,7 +6,7 @@ Program służy do wyszukiwania najkrótszej drogi w nieskierowanym grafie.
 Przeszukiwanie grafu przebiega losowo, przez wiele niezależnych agentów -mrówek.
 
 ## Algorytm mrówkowy
-```
+``
 stworzenie albo wczytanie grafu o W wierzchołkach
 stworzenie populacji M mrówek
 **DOPÓKI** rozmycie < ROZMYCIE_MAX **I** czas symulacji < T_MAX:
@@ -24,7 +24,7 @@ stworzenie populacji M mrówek
 	odparowanie feromonu (*)
 	znalezienie optymalnej trasy i obliczenie rozmycia
 zapisanie optymalnej trasy
-```
+``
 
 ## Tworzenie grafu
 Program zawiera moduł odpowiedzialny za stworzenie spójnego grafu o zadanej liczbie wierzchołków, średnią i maksymalną liczbą krawędzi przypadających na wierzchołek. Tworzenie takiego grafu przebiega dwuetapowo. Najpierw łączone są ze sobą wszystkie
