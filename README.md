@@ -9,16 +9,16 @@ Przeszukiwanie grafu przebiega losowo, przez wiele niezależnych agentów -mrów
 ```
 stworzenie albo wczytanie grafu o W wierzchołkach
 stworzenie populacji M mrówek
-*DOPÓKI* rozmycie < ROZMYCIE_MAX *I* czas symulacji < T_MAX:
-	*NIECH KAŻDA* mrówka:
-    	*JEŚLI* ilość krawędzi w jej trasie przekracza W:
+**DOPÓKI** rozmycie < ROZMYCIE_MAX **I** czas symulacji < T_MAX:
+	**NIECH KAŻDA** mrówka:
+    	**JEŚLI** ilość krawędzi w jej trasie przekracza W:
 			idzie na start
 		wybierze losowo kolejny węzeł
 		skoczy tam
 		obliczy długość swojej trasy
-		*JEŚLI* jest na starcie:
+		**JEŚLI** jest na starcie:
 			wyczyści pamięć
-		*JEŚLI* jest na mecie:
+		**JEŚLI** jest na mecie:
 			doda feromon na trasie (**)
 			wraca na start
 	odparowanie feromonu (*)
@@ -43,51 +43,52 @@ Program umożliwia ustawienie parametrów symulacji, opisanych w pierwszej czę�
 program wyświetla następujące informacje:
 ```
 AMrowkowy -- Adam Brodacki
+
 Program szuka najkrótszej ścieżki w grafie, pomiędzy dwoma węzłami.
+
 Dostępne opcje:
---help wyświetla tę informację
+  --help                 wyświetla tę informację
+
 Parametry symulacji:
---start arg (=1)
---meta arg (=2) nr węzła startowego
-nr węzła końcowego
---m arg (=50) liczba mrówek
---A arg (=4)
---B arg (=1)
---R arg (=0.875) wykładnik odpowiadający feromonowi
-wykładnik odpowiadający odległości
-współczynnik odparowania
---dt arg (=5) co tyle kroków sprawdza warunek zakończenia i zapisuje
-stan grafu
-maksymalna liczba kroków symulacji
-maksymalna wartość ,,rozmycia feromonu'' między
-ścieżkami (warunek zakończenia symulacji)
---t arg (=10000)
---thre arg (=0.25)
+  --start arg (=1)       nr węzła startowego
+  --meta arg (=2)        nr węzła końcowego
+                         
+  --m arg (=50)          liczba mrówek
+                         
+  --A arg (=4)           wykładnik odpowiadający feromonowi
+  --B arg (=1)           wykładnik odpowiadający odległości
+  --R arg (=0.875)       współczynnik odparowania
+                         
+  --dt arg (=5)          co tyle kroków sprawdza warunek zakończenia i 
+                         zapisuje stan grafu
+  --t arg (=10000)       maksymalna liczba kroków symulacji
+  --thre arg (=0.25)     maksymalna wartość ,,rozmycia feromonu'' między 
+                         ścieżkami (warunek zakończenia symulacji)
+
 Wczytywanie, tworzenie i zapisywanie grafu:
---if arg
-wejściowy plik tekstowy z grafem (użycie tej
-spowoduje pominięcie losowania nowego grafu)
-Plik zawiera w pierwszej linii liczbę wierzchołków
-grafu, następne linie zawierają trójki liczb, dwie
-pierwsze reprezentują nry wierzchołków w numeracji
-od zera, trzecia odległość tych wierzchołków.
---of arg wyjściowy plik tekstowy z grafem (format pliku j.w.)
---wg arg (=15)
---kga arg (=5)
---kgm arg (=10) liczba wierzchołków grafu do wylosowania
-średnia liczba krawędzi
-maksymalna liczba krawędzi
+  --if arg               wejściowy plik tekstowy z grafem (użycie tej 
+                         spowoduje pominięcie losowania nowego grafu)
+                         
+                         Plik zawiera w pierwszej linii liczbę wierzchołków 
+                         grafu, następne linie zawierają trójki liczb, dwie 
+                         pierwsze reprezentują nry wierzchołków w numeracji 
+                         od zera, trzecia odległość tych wierzchołków.
+                         
+  --of arg               wyjściowy plik tekstowy z grafem (format pliku j.w.)
+                         
+                         
+  --wg arg (=15)         liczba wierzchołków grafu do wylosowania
+  --kga arg (=5)         średnia liczba krawędzi
+  --kgm arg (=10)        maksymalna liczba krawędzi
+
 Dane wyjściowe:
---p-trasa arg
---g-trasa arg
---g-feromon arg
---g-dt arg
-zapisuje listę wierzchołków trasy do pliku
-tekstowego o podanej nazwie (kolejne linie zawierają
-kolejne wierzchołki, z pominięciem startu i mety)
-zapisuje graf z wyznaczoną trasą w formacie dot
-zapisuje graf z końcowym stanem feromonu w formacie
-dot
-szkielet nazwy pliku na stany pośrednie, zapisywane co
-dt kroków, formacie dot
+  --p-trasa arg          zapisuje listę wierzchołków trasy do pliku 
+                         tekstowego o podanej nazwie (kolejne linie zawierają 
+                         kolejne wierzchołki, z pominięciem startu i mety)
+  --g-trasa arg          zapisuje graf z wyznaczoną trasą w formacie dot
+  --g-feromon arg        zapisuje graf z końcowym stanem feromonu w formacie 
+                         dot
+  --g-dt arg             szkielet nazwy pliku na stany pośrednie, zapisywane 
+                         co dt kroków, formacie dot
+
 ```
