@@ -3,6 +3,7 @@ using namespace std;
 
 
 Tmrowka::Tmrowka(int W, int start){
+    K=0;
     Wm=W;
     trasa=new int[W];
     trasa[0]=start;

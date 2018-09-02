@@ -51,8 +51,8 @@ Tzycie::~Tzycie() {
 
 
 double Tzycie::P(int i, int j){
-    //return d(i,j);
-    return pow(f(i,j),A) / pow(d(i,j),B);
+    if (d(i,j)) return pow(f(i,j),A) / pow(d(i,j),B);
+    return 0.0;
 }
 
 
@@ -118,10 +118,10 @@ void Tzycie::idz(Tmrowka *m){
 
     if(j==meta) {
         i=start;
-        for(int k=1;k<=m->K;k++){
+        for(int k=0;k<=m->K;k++){
                int j=m->trasa[k];
                //cout <<"->"<<j;
-                set_f(i,j,f(i,j)+1/(m->L));
+                set_f(i,j,f(i,j)+1.0/(m->L));
                i=j;
                }
         //cout <<endl;
@@ -165,7 +165,6 @@ int Tzycie::zyjcie(double kontrast_min, int dt){
 
 int Tzycie::znajdzcie(double kontrast_min, int dt, int T){
     cerr <<"   Życie mrówek do momentu znalezienia trasy o odp. kontraście, ale max."<<T<<"kroków, spr. co"<<dt<<"kroków."<<endl;
-
     while (zyjcie(kontrast_min,dt) && t<T) cerr <<"#";
     cerr << endl<< endl;
 
