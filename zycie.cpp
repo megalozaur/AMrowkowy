@@ -118,7 +118,7 @@ void Tzycie::idz(Tmrowka *m){
 
     if(j==meta) {
         i=start;
-        for(int k=0;k<=m->K;k++){
+        for(int k=1;k<=m->K;k++){
                int j=m->trasa[k];
                //cout <<"->"<<j;
                 set_f(i,j,f(i,j)+1.0/(m->L));
